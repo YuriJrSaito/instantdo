@@ -1,0 +1,40 @@
+.card{
+    width: 300px;
+    height: 100px;
+
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+
+    margin-bottom: 20px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 10px;
+
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.card .cardContent{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 10px;
+    gap: 7px;
+}
+
+.card .cardContent p{
+    text-align: center;
+}
+
+.card .cardContent img{
+    width: 60px;
+    border-radius: 50px;
+}

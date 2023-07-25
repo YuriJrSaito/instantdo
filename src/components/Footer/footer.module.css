@@ -1,0 +1,19 @@
+.footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 70%;
+    height: 33px;
+}
+
+.footer .link a{
+    color: #0047FF;
+    font-size: 20px;
+}
+
+.footer .logo span{
+    margin-left: 9px;
+    cursor: pointer;
+}
