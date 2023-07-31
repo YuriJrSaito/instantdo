@@ -1,10 +1,10 @@
 .header{
-    width: 70%;
-    height: 110px;
+    width: 100%;
+    height: 96px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-radius: 14px;
+    border-radius: 12px;
     background: rgba(255, 255, 255, 0.35);
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
@@ -18,26 +18,26 @@
 
 .logo h1{
     position: absolute;
-    font-size: 27px;
-    margin-top: 21px;
+    font-size: 23px;
+    margin-top: 20px;
 }
 
 .logo h2{
     font-weight: bold;
     color: #8F00FF;
-    font-size: 65px;
+    font-size: 52px;
     position: absolute;
     margin-top: 38px;
-    margin-left: -3px;
+    margin-left: 0px;
 }
 
 .logo h3{
     font-weight: bold;
     color: #8F00FF;
-    font-size: 95px;
+    font-size: 85px;
     position: relative;
-    margin-top: 7px;
-    margin-left: 90px;
+    margin-top: 6px;
+    margin-left: 80px;
 }
 
 .login button{
@@ -45,11 +45,11 @@
     height: 60px;
     width: 124px;
     border: none;
-    border-radius: 14px;
+    border-radius: 8px;
 
     font-weight: bold;
     color: #FFFFFF;
-    font-size: 20px;
+    font-size: 18px;
 
     margin-right: 15px;
 

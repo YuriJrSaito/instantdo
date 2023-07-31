@@ -1,16 +1,11 @@
 .panel{
-    width: 370px;
+    width: 304px;
     min-height: 655px;
-
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 50px;
-    gap: 10px;
-    border-radius: 10px;
-    background: rgba(255, 255, 255, 0.35);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    position: relative;
+    margin-top: 50px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.6);
 }
 
 .panel .top{
@@ -31,9 +26,9 @@
 }
 
 .emptyPanel{
-    width: 370px;
-    height: 655px;
-
+    width: 304px;
+    min-height: 655px;
+    margin-top: 50px;
     border-radius: 10px;
 
     background: rgba(255, 255, 255, 0.2);
@@ -43,24 +38,38 @@
 
 .panel .title{
     width: 142px;
-    height: 50px;
+    height: 45px;
     background-color: #FFFFFF;
 
     position: absolute;
-    margin-right: 200px;
+    margin-right: 130px;
     margin-top: -16px;
 }
 
 .panel .title h1{
     color: #B10E5C;
     font-weight: bold;
-    font-size: 33px;
-    margin-top: 5px;
+    font-size: 32px;
+    margin-top: 3px;
     text-align: center;
 }
 
 .cards{
     width: 100%;
     height: 100%;
-    margin-left: 35px;
+    margin-left: calc((304px - 256px) / 2);
+}
+
+.placeholder{
+    position: absolute;
+    background-color: gray;
+    border-radius: 4px;
+    margin-left: calc((304px - 256px) / 2);
+    margin-top: 63px;
+}
+
+@media screen and (max-width: 1700px){
+    .top, .bottom{
+      width: 90%;
+    }
 }

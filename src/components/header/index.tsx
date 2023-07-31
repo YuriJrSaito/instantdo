@@ -1,6 +1,14 @@
-import style from '@/components/header/header.module.css'
+import style from '@/components/header/header.module.css';
+import { useContext } from 'react';
+import { AuthContext } from '@/contexts/auth/AuthContext';
 
 const Header = () =>{
+    const auth = useContext(AuthContext);
+
+    const handleLogin = () =>{
+        const validate = auth.signin('');
+    }
+
     return (
         <div className={style.header}>
             <div className={style.logo}>
@@ -9,7 +17,7 @@ const Header = () =>{
                 <h3>!</h3>
             </div>
             <div className={style.login}>
-                <button>
+                <button onClick={handleLogin}>
                     <svg width="23px" height="28px" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M7.34375 13.7812L10.625 10.5L7.34375 7.21875" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                         <path d="M1.875 10.5H10.625" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>

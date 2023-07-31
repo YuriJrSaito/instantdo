@@ -1,40 +1,43 @@
 .card{
-    width: 300px;
-    height: 100px;
-
+    max-width: 256px;
+    min-height: 86px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
     top: auto !important;
     left: auto !important;
     right: auto !important;
     bottom: auto !important;
 
     margin-bottom: 20px;
+    border-radius: 4px;
 
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-
-    border-radius: 10px;
-
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(2px);
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(2px);
     border: 1px solid rgba(255, 255, 255, 0.4);
+    
+    -webkit-box-shadow: 0px 4px 2px -4px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 4px 2px -4px rgba(0,0,0,0.75);
+    box-shadow: 0px 4px 2px -4px rgba(0,0,0,0.75);
 }
 
 .card .cardContent{
+    width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     padding: 10px 10px;
     gap: 7px;
 }
 
 .card .cardContent p{
-    text-align: center;
+    font-size: 16px;
 }
 
 .card .cardContent img{
-    width: 60px;
+    width: 48px;
+    height: 48px;
     border-radius: 50px;
 }

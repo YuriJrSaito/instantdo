@@ -2,16 +2,19 @@
 import style from '@/components/Panel/panel.module.css'
 import Card from '../Card';
 import { Droppable } from 'react-beautiful-dnd';
+import { Task } from '@/app/page';
+import { useState } from 'react';
 
-const Panel = ({title, color, data, panelId}: {title:string, color:string, data:any, panelId:string}) =>{
+const Panel = ({title, color, data, panelId, placeholderProps}: {title:string, color:string, data:Array<Task>, panelId:string, placeholderProps: any}) =>{
+
 
     return (
         <>        
             {
                 title != "" &&
                 <Droppable droppableId={panelId} key={panelId}>
-                    {(provided) => (
-                        <ul className={style.panel}>
+                    {(provided, snapshot) => (
+                        <div className={style.panel}>
                             <div className={style.top}>
                                 <div className={style.title}>
                                     <h1 style={{color: `${color}`}}>{title}</h1>
@@ -25,9 +28,22 @@ const Panel = ({title, color, data, panelId}: {title:string, color:string, data:
                                     ))  
                                 }
                                 {provided.placeholder}
+                                {snapshot.isDraggingOver && (
+                                    <div
+                                        className={style.placeholder}
+                                        style={{
+                                            top: placeholderProps.clientY,
+                                            left: placeholderProps.clientX,
+                                            height: placeholderProps.clientHeight,
+                                            width: placeholderProps.clientWidth
+                                        }}
+                                    >
+                                    </div>  
+                                )}
+                                
                                 </div>
                             </div>
-                        </ul>
+                        </div>
                     )}
                 </Droppable>
             }
